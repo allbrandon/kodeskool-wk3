@@ -1,16 +1,62 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KodeSkool Wk3 Exercises</title>
-    <link rel = "stylesheet"
-    type = "text/css"
-    href = "style.css" />
-</head>
-<body>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAeFBMVEX///8AAAD6+vpLS0v39/empqbp6enw8PDDw8Pt7e2AgIDj4+N7e3sKCgqhoaFhYWErKyuvr6/Q0NBaWlrf398zMzOJiYlvb2+VlZVVVVW2trbY2NjGxsaLi4t1dXURERE7OztFRUUdHR0nJydGRkYYGBiTk5NpaWluVCMxAAAEhklEQVR4nO2c63LiMAxGcUhIWi7hvtzKddu+/xtugYVYcuKYAonFfOcn487ojBPZkp02GgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIB3JEndETyXSKll3TE8kWCqlJq81R3G04hTdWRedxzPYrxVZzp1R/IcVupKr+5YnkGkNF4wlb4rQlx3PA8mHFG/Vd0BPZj2hOgd2nUH9GCGdPpGYd0BPZge9Xu5ReIP9ROyRATZW1Uy8C/1G1YT390ETTfBVldoenEUlJte3ARZevmoLLz7cRJcU79BdeHdj4NgPCd6Gynp5Uy54PhA/LZi0suZUsGVosiav3JBll5+WFQc4Z2UCL4bfkrNqo7xLqyC/3svnHVQfZy/xia4nOT6KTVv1RDpL7EIJt0CP6UmcnqixYIRdWJ7bTGppkgw6FChqDGlPwiplooEY9p76R67Z2xKhaSafMFra/dM/5xUkg35dS6idZ8rmNC5Si/FUYum1b6EVJMnyHYv79lo3jUU0PfNEWTFUUTGs62N/6nGEIybxKDLW7tsev9UHvGNcME2LY76ZnHEXtCd5817JsiKo1HeUtDq0zkeVxzybVDB4vSiE9IS3+8DCiLIWrvFvReWanwuoHTBHQ3bVrsP6NDvyuK9GU2QvloTe0nEGqX+ppqArgpX0rKdJks1G19TTYHg1OEvWbnvaarJF3Rr7bICys9UkyfYNdPLMll8DZIhe9NYqllXFPNN5AhueXoZri/bm8/5ghy7sFTjYwFlCqbs5GhJRxzI49v2voAyBL/YgJkxwyN9nlgB5V/fmwvy9MJqp/MzTHbgeqrxsBVFBT/5DLDW08WQvGtZqvExjxJBY/cSmXInUjLqUoJ4WRvqgkZx1Nrk6hlP8vi0q9l5ea6tCZoH09MiP7WlMscCauNnP992NhFr1f12tlx8a4a83dTxMIGesAlqy/h58Rjurz8Y75t/K+AZm+DM0MmUU2O0p9gEszXiOj27n53qZNRbjWX07Ruugtefot7Q18KvADdBYTcrdNzewYL2mgSsR9hZFvW/RV+ETTDYZYZNT5e5Uqy3LBZKYz8T6Wi/J8Na2GoeeViz27ELxnvFGfm6ZSmg5KbTm2moUlGzWHZX7W1nGko42L1Sfp3SvI4n6kqsy4XYnLLQw+ZLAU5XmoPBNxPsitm8uX5WEC5npEHoZf8lD1fBI60PzVDKFN4i+LM7zS4gSskztwlqVyykPKMugmFWvofXhV9Kz6JEMGyvvkb97GwzfiXBIJmmW/Y4Zm16j+8dECyC7SxlXjLKMEsyUkpg2yOqFUudY9s61o/SpBQVNkFy9DJfk+KwWUOsv8ImGNKbIgQxBYU1iyaFflJyaNkykfdlzxFB/2mlZB3MO8FW6iCou122k/nI8TPumfhM+feDRldG0he8TnvRiBxkdyRNX8OxmhjOdqcR+/XCy3N4G+7lkpzESbixHpQHBKXz+oLbFxdsBOGFuiMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgDv4B8+3JsGgvWgkAAAAAElFTkSuQmCC" alt="">
-</body>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+{% seo %}
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          {% if site.github.is_project_page %}
+            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
+          {% endif %}
+
+          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+
+          {% if site.show_downloads %}
+            <section id="downloads">
+              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
+            </section>
+          {% endif %}
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        {{ content }}
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        {% if site.github.is_project_page %}
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
 </html>
